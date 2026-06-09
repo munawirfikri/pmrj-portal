@@ -1,0 +1,18 @@
+{
+    "name": "PMRJ Portal",
+    "short_name": "PMRJ Portal",
+    "description": "Sistem Portal Satu Pintu & Back Office Persatuan Masyarakat Riau Jakarta (PMRJ)",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#3985c3",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/assets/img/logo-pmrj-black.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
