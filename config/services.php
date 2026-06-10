@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'anggota' => [
+        'url' => env('MEMBER_PORTAL_URL', 'https://anggota.pmrj.or.id'),
+    ],
+
 ];

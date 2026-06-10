@@ -35,7 +35,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     // Anggota (Members) Management & Verification
     Route::get('/anggota/export', [AnggotaController::class, 'exportCsv'])->name('admin.anggota.export');
     Route::get('/anggota', [AnggotaController::class, 'index'])->name('admin.anggota.index');
-    Route::get('/anggota/media/{folder}/{filename}', [AnggotaController::class, 'serveMedia'])->name('admin.anggota.media');
     Route::get('/anggota/{id}', [AnggotaController::class, 'show'])->name('admin.anggota.show');
     Route::get('/anggota/{id}/edit', [AnggotaController::class, 'edit'])->name('admin.anggota.edit');
     Route::put('/anggota/{id}', [AnggotaController::class, 'update'])->name('admin.anggota.update');

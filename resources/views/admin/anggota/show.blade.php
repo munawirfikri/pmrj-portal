@@ -16,7 +16,7 @@
         <div class="profile-card-left" style="margin-bottom: 1.5rem;">
             <div class="profile-avatar">
                 @if($anggota->foto)
-                    <img src="{{ route('admin.anggota.media', ['folder' => 'foto', 'filename' => basename($anggota->foto)]) }}" alt="Foto Profil">
+                    <img src="{{ rtrim(config('services.anggota.url'), '/') }}/storage/app/public/photos/{{ basename($anggota->foto) }}" alt="Foto Profil">
                 @else
                     <i class="fa-solid fa-user"></i>
                 @endif
@@ -52,8 +52,8 @@
                     @php
                         $ktpFilename = basename($anggota->foto_ktp);
                     @endphp
-                    <a href="{{ route('admin.anggota.media', ['folder' => 'ktp', 'filename' => $ktpFilename]) }}" target="_blank">
-                        <img src="{{ route('admin.anggota.media', ['folder' => 'ktp', 'filename' => $ktpFilename]) }}" alt="Scan KTP" class="ktp-preview" title="Klik untuk perbesar">
+                    <a href="{{ rtrim(config('services.anggota.url'), '/') }}/storage/app/public/ktp/{{ $ktpFilename }}" target="_blank">
+                        <img src="{{ rtrim(config('services.anggota.url'), '/') }}/storage/app/public/ktp/{{ $ktpFilename }}" alt="Scan KTP" class="ktp-preview" title="Klik untuk perbesar">
                     </a>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 0.5rem; text-align: center;">
